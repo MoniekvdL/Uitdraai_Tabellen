@@ -26,6 +26,9 @@ jm17 <- jm17[jm17$GGD == 2, ]
 var_df <- read.csv("G:\\Projecten\\Tabellenboek\\varlijst.csv", header=FALSE)
 FALSE %in% (var_df$V1 %in% names(jm17)) #als waarde TRUE wordt weergeven dan missen er variabelen!
 
+#lookup welke variabelen dan ontbreken (Moniek)
+which(var_df$V1 %in% names(jm17), arr.ind = TRUE, useNames = TRUE)
+
 # Voor testdoeleinden
 # var_df <- data.frame(V1 = var_df[1:3,1])
 
